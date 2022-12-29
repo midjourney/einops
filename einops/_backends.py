@@ -496,7 +496,7 @@ class TensorflowBackend(AbstractBackend):
         self.tf = tensorflow
 
     def is_appropriate_type(self, tensor):
-        return isinstance(tensor, (self.tf.Tensor, self.tf.Variable))
+        return False # isinstance(tensor, (self.tf.Tensor, self.tf.Variable))
 
     def from_numpy(self, x):
         assert self.tf.executing_eagerly()
